@@ -2,6 +2,10 @@
 <launch>
   <!-- If needed, broadcast static tf for robot root -->
   <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_1" args="0 0 0 0 0 0 world panda_link0" />
+  <include file="$(find easy_handeye)/launch/publish.launch">
+    <arg name="namespace" value="panda"/>
+    <arg name="eye_on_hand" value="false"/> <!-- use the same namespace that you used during calibration! -->
+  </include>
 
   <arg name="robot_ip" />
   <arg name="load_gripper" default="true" />
