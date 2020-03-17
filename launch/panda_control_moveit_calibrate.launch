@@ -20,7 +20,7 @@
 
   <include file="$(find easy_handeye)/launch/calibrate.launch">
     <arg name="eye_on_hand" value="false"/>
-    <arg name="namespace" value="panda"/>
+    <arg name="namespace_prefix" value="panda"/>
 
     <!-- fill in the following parameters according to your robot's published tf frames -->
     <arg name="robot_base_frame" value="/panda_link0"/>
